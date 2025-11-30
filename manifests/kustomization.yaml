@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - service.yaml
+  - configmap.yaml
+
+# optional: set namespace for all resources
+namespace: default
+
+# optional: add labels to all resources
+commonLabels:
+  app: myapp
+
+# optional: add image overrides
+images:
+  - name: myapp
+    newTag: v1.0.0
