@@ -16,7 +16,7 @@ spec:
         - name: ecr-secret-1
       containers:
         - name: myapp
-          image: 851725258124.dkr.ecr.ap-south-1.amazonaws.com/mk-ecr-dotnet:c3395e4acaaf9bcd029fe7e329f27862277be48d
+          image: 851725258124.dkr.ecr.ap-south-1.amazonaws.com/mk-ecr-dotnet:c3ec365f35e33e591d0623b254ffce2f9dcaf57a
           imagePullPolicy: Always     # 🔥 REQUIRED for Minikube to pull new images
           ports:
             - containerPort: 8080
