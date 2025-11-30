@@ -16,6 +16,6 @@ spec:
       - name: ecr-secret
       containers:
       - name: myapp
-        image: 851725258124.dkr.ecr.ap-south-1.amazonaws.com/mk-ecr-dotnet:1646d85d5a39b2f83caaeb290ea1dc76fb9def57
+        image: 851725258124.dkr.ecr.ap-south-1.amazonaws.com/mk-ecr-dotnet:aa0b6d8bfd5c2bd722223df777dfc29471c52bf2
         ports:
         - containerPort: 8080
