@@ -13,7 +13,7 @@ spec:
         app: myapp
     spec:
       imagePullSecrets:
-        - name: ecr-secret
+        - name: ecr-secret-1
       containers:
         - name: myapp
           image: 851725258124.dkr.ecr.ap-south-1.amazonaws.com/mk-ecr-dotnet:9faceea5803fbf0ea0db0de8111928193daa54c4
