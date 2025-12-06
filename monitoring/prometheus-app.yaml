@@ -6,9 +6,22 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://prometheus-community.github.io/helm-charts'
-    chart: prometheus
-    targetRevision: 27.50.0  # latest stable version
+    repoURL: 'https://github.com/munikoteswararao-chevuru/argocd-deployments'
+    targetRevision: main
+    path: monitoring
+      values: |
+        server:
+          service:
+            type: NodePort
+            nodePort: 32001
+        alertmanager:
+          service:
+            type: NodePort
+            nodePort: 32002
+        pushgateway:
+          service:
+            type: NodePort
+            nodePort: 32003
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
@@ -16,5 +29,4 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+
