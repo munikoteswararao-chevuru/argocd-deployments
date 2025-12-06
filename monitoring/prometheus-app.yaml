@@ -9,19 +9,6 @@ spec:
     repoURL: 'https://github.com/munikoteswararao-chevuru/argocd-deployments'
     targetRevision: main
     path: monitoring
-      values: |
-        server:
-          service:
-            type: NodePort
-            nodePort: 32001
-        alertmanager:
-          service:
-            type: NodePort
-            nodePort: 32002
-        pushgateway:
-          service:
-            type: NodePort
-            nodePort: 32003
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
