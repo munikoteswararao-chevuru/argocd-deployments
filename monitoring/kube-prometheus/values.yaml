@@ -1,0 +1,12 @@
+grafana:
+    enabled: false   # Grafana already exists
+
+    alertmanager:
+        enabled: false
+
+        prometheus:
+            prometheusSpec:
+                  retention: 2d
+                        serviceMonitorSelectorNilUsesHelmValues: false
+                              podMonitorSelectorNilUsesHelmValues: false
+
